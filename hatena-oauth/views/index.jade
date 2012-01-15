@@ -1,0 +1,15 @@
+!!! 5
+html(lang="ja")
+  head
+    title node.js sample app
+  body
+    h1 node.js sample app
+    - if (session.user_profile)
+      p= "Welcome, " + session.user_profile.url_name
+      p= "Welcome, " + session.user_profile.display_name
+      p
+        a(href="/signout") Sign out
+    - else
+      p
+        a(href="/auth/hatena") Sign in with hatena
+
